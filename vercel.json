@@ -26,5 +26,6 @@
       "src": "/(.*)",
       "dest": "backend/publicaciones_municipales/wsgi.py"
     }
-  ]
+  ],
+  "outputDirectory": "staticfiles"
 }
