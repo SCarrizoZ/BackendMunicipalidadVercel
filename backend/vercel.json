@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "publicaciones_municipales/wsgi.py",
+      "src": "backend/publicaciones_municipales/wsgi.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "15mb",
@@ -10,7 +10,7 @@
       }
     },
     {
-      "src": "build.sh",
+      "src": "backend/build.sh",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "staticfiles"
@@ -24,7 +24,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "publicaciones_municipales/wsgi.py"
+      "dest": "backend/publicaciones_municipales/wsgi.py"
     }
   ]
 }
