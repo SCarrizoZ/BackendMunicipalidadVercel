@@ -142,11 +142,9 @@ DEBUG = (
 
 # This setting informs Django of the URI path from which your static files will be served to users
 # Here, they well be accessible at your-domain.onrender.com/static/... or yourcustomdomain.com/static/...
-STATIC_URL = "/static/"
-STATIC_ROOT = (
-    BASE_DIR / "staticfiles"
-)  # Esto se usará para almacenar archivos estáticos recolectados.
-STATICFILES_DIRS = [BASE_DIR / "static"]  # Asegúrate de que esta carpeta exista.
+STATIC_URL = (os.path.join(BASE_DIR, "static"),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build", "static")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
