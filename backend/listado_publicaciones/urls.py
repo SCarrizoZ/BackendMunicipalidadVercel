@@ -10,6 +10,7 @@ from .views.v1 import (
     RespuestasMunicipalesViewSet,
     SituacionesPublicacionesViewSet,
 )
+from .views.v1 import export_to_excel
 
 router = DefaultRouter()
 router.register(r"publicaciones", PublicacionViewSet, basename="publicaciones")
@@ -37,4 +38,5 @@ router.register(
 
 urlpatterns = [
     path("v1/", include(router.urls)),
+    path("export-to-excel/", export_to_excel),
 ]
