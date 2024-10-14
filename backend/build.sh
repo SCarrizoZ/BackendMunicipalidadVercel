@@ -10,3 +10,6 @@ python3 manage.py collectstatic --no-input
 
 # Apply any outstanding database migrations
 python3 manage.py migrate
+
+# Move staticfiles to output directory
+mv staticfiles/ /vercel/output/staticfiles
