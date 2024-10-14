@@ -24,7 +24,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "<projectname>/wsgi.py"
+      "dest": "publicaciones_municipales/wsgi.py"
     }
   ]
 }

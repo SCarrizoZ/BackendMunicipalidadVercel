@@ -5,10 +5,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-STATIC_URL = "static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
