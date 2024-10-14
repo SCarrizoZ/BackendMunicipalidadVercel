@@ -10,3 +10,11 @@ python3 manage.py collectstatic --no-input
 
 # Apply any outstanding database migrations
 python3 manage.py migrate
+
+# Verifica si los archivos estáticos se recopilaron correctamente
+if [ -d "staticfiles" ]; then
+  echo "Archivos estáticos recopilados exitosamente."
+else
+  echo "Error: No se encontraron archivos estáticos."
+  exit 1
+fi
