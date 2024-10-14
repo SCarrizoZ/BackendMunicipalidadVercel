@@ -20,11 +20,12 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/staticfiles/$1"
+      "dest": "/static/$1"
     },
     {
       "src": "/(.*)",
       "dest": "publicaciones_municipales/wsgi.py"
     }
-  ]
+  ],
+  "outputDirectory": "staticfiles"
 }
